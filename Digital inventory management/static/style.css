@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Base & Layout
+   ========================================================================== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(24, 24, 27, 0.85), rgba(24, 24, 27, 0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-content {
+    min-height: 100vh;
+    margin-left: 260px;
+    padding: 40px;
+}
+
+/* ==========================================================================
+   Navigation (Sidebar)
+   ========================================================================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 260px;
+    height: 100vh;
+    padding-top: 30px;
+    background: rgba(24, 24, 27, 0.7);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.sidebar .navbar-brand {
+    display: block;
+    padding: 0 30px 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 30px;
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.sidebar a:hover, 
+.sidebar a.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: #3b82f6;
+}
+
+/* ==========================================================================
+   Components (Cards & Containers)
+   ========================================================================== */
+.glass-card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-box {
+    width: 420px;
+    padding: 50px 40px;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #f1f5f9;
+    color: #f1f5f9;
+}
+
+.table-dark {
+    background-color: rgba(24, 24, 27, 0.9) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #f1f5f9;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+    background-color: transparent;
+    color: #f1f5f9;
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+/* ==========================================================================
+   Forms & Inputs
+   ========================================================================== */
+.form-control, 
+.form-select, 
+.input-group-text {
+    background-color: rgba(24, 24, 27, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+
+.form-control:focus, 
+.form-select:focus {
+    background-color: rgba(24, 24, 27, 0.9) !important;
+    border-color: #3b82f6 !important;
+    color: white !important;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+.form-control::placeholder {
+    color: #64748b !important;
+}
+
+/* ==========================================================================
+   Buttons & Utilities
+   ========================================================================== */
+.btn-primary { 
+    background-color: #3b82f6; 
+    border: none; 
+}
+
+.btn-primary:hover { 
+    background-color: #2563eb; 
+}
+
+.btn-success { 
+    background-color: #10b981; 
+    border: none; 
+}
+
+.btn-success:hover { 
+    background-color: #059669; 
+}
+
+/* Bootstrap Theme Overrides */
+.text-primary { color: #3b82f6 !important; }
+.text-success { color: #10b981 !important; }
+.text-danger  { color: #ef4444 !important; }
